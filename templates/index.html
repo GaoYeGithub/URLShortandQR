@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener and QR Code Generator</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>URL Shortener and QR Code Generator</h1>
+        </div>
+        <form action="{{ url_for('shorten') }}" method="post" class="form">
+            <label for="url">Enter URL:</label>
+            <input type="text" id="url" name="url" required>
+            <input type="submit" value="Shorten URL and Generate QR Code">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortened URL and QR Code</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shortened URL and QR Code</h1>
+        </div>
+        <div class="result">
+            <p>Shortened URL: <a href="{{ shortened_url }}" target="_blank">{{ shortened_url }}</a></p>
+            <p>QR Code:</p>
+            <img src="data:image/png;base64, {{ qr_code }}">
+            <br>
+            <a href="{{ url_for('index') }}" class="button">Shorten another URL</a>
+        </div>
+    </div>
+</body>
+</html>
